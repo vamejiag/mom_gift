@@ -97,10 +97,6 @@ def fetch_quote():
     except requests.exceptions.RequestException:
         return "Ups, no se pudo obtener una frase. Inténtalo de nuevo más tarde."
 
-# create the quote
-#quote = fetch_quotes()
-
-
 with st.container():
     # Display the motivational quote
     if "quote" not in st.session_state or st.session_state.quote is 'nada':
