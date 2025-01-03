@@ -1,6 +1,5 @@
 import streamlit as st
 import random
-from transformers import pipeline
 
 
 # Function to initialize the chatbot for generating 365 reasons
