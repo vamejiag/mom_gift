@@ -41,7 +41,10 @@ def get_random_quote():
 
 # Streamlit UI
 def main():
-    st.set_page_config(page_title="Para mi Snoopy", page_icon="❤️",layout='wide')
+    st.set_page_config(page_title="Para mi Snoopy",
+                       page_icon="❤️",
+                       layout='wide',
+                       initial_sidebar_state="collapsed")
 
     # seting parameters
     # Example of markdown with custom font and size
@@ -74,46 +77,20 @@ def main():
     with col1:
         st.markdown('<div class="custom_font"><h2>Música maestro</h2></div>', unsafe_allow_html=True)
         st.image("./images/music.jpg",use_container_width=True)
-        st.button(icon="🎤",use_container_width=True,label='')
+        if st.button(icon="🎤",use_container_width=True,label=''):
+            st.switch_page('pages/1_🎤_music.py')
 
     with col2:
         st.markdown('<div class="custom_font"><h2>Por qué te amo?</h2></div>', unsafe_allow_html=True)
         st.image("./images/memories.jpg",use_container_width=True)
-        st.button(icon="❤️",use_container_width=True,label='')
+        if st.button(icon="❤️",use_container_width=True,label=''):
+            st.switch_page('pages/2_❤️_love.py')
 
     with col3:
         st.markdown('<div class="custom_font"><h2>A pensar</h2></div>', unsafe_allow_html=True)
         st.image("./images/read.jpg",use_container_width=True)
-        st.button(icon="📖",use_container_width=True,label='')
-
-    # # Create Tabs
-    # tabs = st.radio("Selecciona una pestaña",
-    #                 ["365 razones por las que te amo", "Generar canción por mood", "Generar frase aleatoria"])
-    #
-    # if tabs == "365 razones por las que te amo":
-    #     st.header("365 Razones por las que te amo")
-    #     # Display a generated reason
-    #     reason = generate_reasons_for_mom()
-    #     st.write(reason)
-    #
-    # elif tabs == "Generar canción por mood":
-    #     st.header("Selecciona tu mood y te recomendaremos una canción")
-    #
-    #     # Mood input
-    #     mood = st.selectbox("Selecciona tu mood", ["happy", "sad", "motivated", "relaxed"])
-    #
-    #     # Get a random song based on the mood
-    #     if mood:
-    #         song = get_song_by_mood(mood)
-    #         st.write(f"Te recomendamos la canción: {song}")
-    #
-    # elif tabs == "Generar frase aleatoria":
-    #     st.header("Generar una frase aleatoria")
-    #
-    #     # Button to generate a random quote
-    #     if st.button("Generar frase aleatoria"):
-    #         quote = get_random_quote()
-    #         st.write(quote)
+        if st.button(icon="📖",use_container_width=True,label=''):
+            st.switch_page('pages/3_📖_Read.py')
 
 
 if __name__ == "__main__":

@@ -81,18 +81,9 @@ def fetch_random_snoopy_image():
 
 
 # List of reasons why you love your mom
-reasons = [
-    "She always puts family first and makes everyone feel loved.",
-    "Her warm hugs and words of encouragement brighten my darkest days.",
-    "She’s my number one cheerleader, supporting me no matter what.",
-    "Her delicious cooking makes every meal feel like a feast.",
-    "She’s a source of wisdom and advice that I rely on daily.",
-    "Her laughter is contagious and lights up any room.",
-    "She’s incredibly hardworking and inspires me to do my best.",
-    "She believes in me even when I doubt myself.",
-    "She taught me the importance of kindness and compassion.",
-    "Her strength and resilience amaze me every single day.",
-]
+df = pd.read_csv("razones_mom.txt",delimiter=';',header=0)
+reasons = df[' output'].to_list()
+
 
 # Generate a reason per day
 current_day = datetime.now().day
