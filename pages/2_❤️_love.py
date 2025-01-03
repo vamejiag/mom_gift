@@ -74,6 +74,7 @@ st.divider()
 def fetch_random_snoopy_image():
     data_set = './images_snoopy.xlsx'
     df = pd.read_excel(data_set)
+    print(df.head())
     id = np.random.randint(0,365,1)[0]
     url = df[df['id']==id]['imageUrl'].item()
 
