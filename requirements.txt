@@ -7,4 +7,3 @@ Requests==2.32.3
 spotipy==2.25.0
 streamlit==1.41.1
 streamlit_player==0.1.5
-~treamlit==1.39.0

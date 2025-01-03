@@ -27,6 +27,7 @@ Inspired by [Building a Content-Based Song Recommendation Website](https://meysa
 
 - Leverage advanced AI techniques to offer personalized song recommendations.
 - Continuously update the recommendation engine to adapt to user preferences.
+- [Example](https://mood-music.streamlit.app/)
 """)
 
 # Subsection: Turn Messages Into Voice Messages
